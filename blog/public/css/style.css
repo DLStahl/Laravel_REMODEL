@@ -1,0 +1,47 @@
+th{
+	text-align: center;
+}
+
+#header{
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#navigation{
+    background-color: blue;
+}
+
+#footer-wrap{
+    min-height: 50px;
+    background-color: grey;
+    color: white;
+}
+
+#footer{
+    margin: auto;
+    max-width: 1000px;
+    min-height:inherit;
+    padding: 10px;
+}
+
+#footer_left{
+	float: left;
+    padding-left: 15px;
+}
+
+#footer_right{
+	float: right;
+    padding-right: 15px;
+}
+
+#content{
+    margin: auto;
+    min-height: 500px;
+}
+
+#main{
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}

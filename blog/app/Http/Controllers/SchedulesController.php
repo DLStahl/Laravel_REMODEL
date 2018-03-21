@@ -14,5 +14,19 @@ class SchedulesController extends Controller
 		return view('schedules.index');
 	}
 
+	public function getInstructions()
+	{
+		return view('schedules.instructions');
+	}
+
+	public function getResident()
+	{
+		return view('schedules.resident');
+	}
+
+	public function getSchedule()
+	{
+		return view('schedules.schedule');
+	}
 	
 }
