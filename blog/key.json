@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "remodel-2018",
+  "private_key_id": "28728e00979590ad9b90f92a415f1222e7801107",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBsCf3t0khOmTw\n4y63ZAQNN7B/iuRdVx/SEt1c5cCXQc5GISeXWjNYC3nLq4yKAxSf8QA1VLUOFq3c\n97y7YWyLU0ZYxV0MGGwFHZndlRYcHCy3dP3DgTxgP3Ss1nAxnLmR1BTeQI+FCatf\nkDDscmzgIrWKk3x72OOpCWYDnEI+4qtdeZfH8RJBUC/T3AcitjOc/17Zbq3Yt0Ub\n9m6ZySqrgmDA/Qpmr0rmH2ronBnZbyuwjBx0CXWJ/wVQYOK2v6Cx+DBIjCPxqeQT\nGv+o2o00xTJVVn+3D5VZACMFLNcoR4RJ6JjRm4NZ3tGp3Bb7PKJ4FfunhxJdU+GJ\n67F8JT8vAgMBAAECggEAWyDY5SVQnHgfdvDEkZdWiqt5eMCt6jasK4ghq2wTnXbi\nKL+/o2fWgWXA07Euad7CLPBUc0Mb/nlwKudKXnUbfz/aeLi/KwowhIWlV4omAWrG\nJTi/jmT3NaeVax5nYghFjRWWDe2dOPBQN6GdSxoZHKln9b+nkZN9pZHc8/TofDIS\ng+7jTUFcyHuwgbs6zVgoIzfLRix2POFdIDmT043NuAOTOLd9WrSmfOnDcB6P/pWB\nwzHeqni2i84vOzbaD0m++9cXPFusIU+zHaRCuxMrgewsP55XvmfT0BK57rFVby4g\nT+lCREwM6e6HJeEu5J/G8uhOs3ggeOCT03l0523s4QKBgQDt9fBWUaEUTbD8inFi\n/0QHOre789JJLBM9VG4Y0OSdsavezH9Fsm9XAUM2FRj49auPjS6MbPIOf7t1Hyug\nJuX0AYaIg2VDbdc7IBaSlz+m1VsBjifkOGx+r0+UGMGs6bYzaH0/BgmOGzTRhXfN\n8oIDoC65Zim0R4GJrR1qBOpdoQKBgQDQXwbqIM4Hvc9ncnt8hvNRMp7bbIskQeiW\nWfj5IhWR42gVe17BFBexXL2ND5JapwDIfwKi0TwdknVitVtB/OZN7NBtLjtXreNr\nP0voEezwc3e9FgRCED1XR/qB86KlCV+tD8iPaVvKnLbJGzxQuUUCG/5Gul+bAhUS\nbNEQzLNKzwKBgQDINbi0p5GDZ6qVkFW+GU+/VWPpO0eeUPsPCs5nCrqPA0G7/wrG\nNU8AQQuvoSiVrv1dlken1rICCO5LqKIn6RJori/nA8ZbaTtBf8n+JEtlrvUW5egi\nWGbQX+fwjrPFLA4kSrG2KPo5GiLidg1KtdM2AbvOOWq1R8RxdbndzazygQKBgBzw\ndbdiovq0Q+/sGHZtD7IBQ8rZwmFgvfrTuB5xu2ktmjERl1FdhwTdCn5i4UKx2wv9\nh9IxGRZKVv9EjM4XX60G7NOdDiTZQ7KLcfFjO/MRNloOirzaIIrUtlgCDF67dIxG\nmuZADb2QElrP64qSkKEAXkpYbBrNKTwL3OVmaKhFAoGBAIzyjjMOCbenY/0R/7s8\nGIrvSx1ztTw5UN8RGGK0KxBRjxMsK0BD6htn/tVEq/+MqQSwne06IeLr9jHbyvgU\nFKon4do7lg3dtIMS1ZgIxVE8TQxyeSERw7nmlyzxOjqmY4lz5z823BHjS6f2m/Ln\nx/d5XIFLo9Ra2eb+/u/s5iJv\n-----END PRIVATE KEY-----\n",
+  "client_email": "remodel@remodel-2018.iam.gserviceaccount.com",
+  "client_id": "106672324184053907276",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/remodel%40remodel-2018.iam.gserviceaccount.com"
+}
