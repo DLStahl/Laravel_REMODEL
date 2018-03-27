@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Schedule;
 
 class SchedulesController extends Controller
 {
@@ -26,7 +27,13 @@ class SchedulesController extends Controller
 
 	public function getSchedule()
 	{
-		return view('schedules.schedule');
+		#This is all going to need to change
+		$fp = fopen('../resources/data/02_18_2018.csv', 'r');
+		$data['schedule'] = new Schedule($fp);
+		fclose($fp);
+		$data['element_ids'] = ["Date", "Location", "Room", "Case Procedures", "Lead Surgeon", "Patient Class", "Proc Start", "Proj End Time"];
+		
+		return view('schedules.table_generator')->withData($data);
 	}
-	
+
 }

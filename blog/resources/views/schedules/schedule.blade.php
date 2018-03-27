@@ -14,14 +14,7 @@
 
 	<br><br><br>
 
-	<?php 
-		//include('filter.php');
-	?> 
-
 	<div class = "container">
-	    <?php 
-	    	//include ('table_generator.php');
-	    ?> 
-	    <p>The schedule table is going to go here</p>
+	    @yield('table_generator')
 	</div>
 @endsection('content')
