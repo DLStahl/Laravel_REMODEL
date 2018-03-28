@@ -35,5 +35,5 @@ class Schedule extends Model
     	}
 
     	return;
-    	}
+    }
 }

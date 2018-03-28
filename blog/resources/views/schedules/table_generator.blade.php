@@ -13,24 +13,26 @@
 	
 			<th>Preference</th>
 			</tr>
-			@foreach ($data['schedule'] as $element){
-				@for($i = 0; $i < count($element); $i++)
+
+			<?php $count = 0; ?>
+			@foreach ($data['schedule']->surgeries as $element)
 					<tr>
-						<td> {{ $i + 1 }} </td>
+						<?php $count = $count + 1; ?>
+						<td> {{ $count }} </td>
 
 						@for($j = 0; $j < count($data['element_ids']); $j++)
-							<td> {{ $element[$i][$data['element_ids'][$j]] }} </td>
+							<td> {{ $element[$data['element_ids'][$j]] }} </td>
 						@endfor
 
 						<td>
 							<select>
+								<option value= "default">Choose here</option>
 								<option value= "first">First</option>
 								<option value= "second">Second</option>
-								<option value= "third">Third</option>
+								<option value= "hird">Third</option>
 							</select>
 						</td>
 					</tr>
-				@endfor
 			@endforeach
 		</table>
 
