@@ -64,18 +64,6 @@ class Schedule extends Model
 				}
 			}
 
-			$room_name = $line[2];
-			$new_room = true;
-			@foreach ($this->rooms as $element) {
-				if($room_name == $this->rooms){
-					$new_room = false;
-					break;
-				}
-			}
-			if($new_room){
-				
-			}
-
 			$this->surgeries[] = [
 				//Date
 				$map_keys[0] => $line[0],
