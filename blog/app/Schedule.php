@@ -13,9 +13,11 @@ class Schedule extends Model
 		$this->surgeries = [];
 		$map_keys = fgetcsv($file_pointer);
 		$room_names = [];
+		$room_times = [];
 		$room_count = 0;
 		while (($line = fgetcsv($file_pointer)) !== false)
 		{
+			//Parse Proc Start TIme
 			$AM = false;
 			$start_time = "";
 			if(strlen($line[6]) > 0){
@@ -39,6 +41,7 @@ class Schedule extends Model
 
 				}
 			}
+
 
 			$AM = false;
 			$end_time = "";
@@ -76,6 +79,7 @@ class Schedule extends Model
 			if($new_room){
 				$room_names[] = $room_name;
 				$room_count = $room_count + 1;
+				$room_times[$room_name] = array($line[6], $line[7]);
 				$this->surgeries[] = [
 					//Date
 					$map_keys[0] => $line[0],
@@ -100,11 +104,21 @@ class Schedule extends Model
 				$index;
 				for($i = 0; $i < $room_count; $i++){
 					if($room_name == $this->surgeries[$i]["Room"]){
-						$old_room = $this->surgeries[$i];
+						$old_room = $this->surgeries[$i]["Room"];
 						$index = $i;
 						break;
 					}
 				}
+				
+				$old_start_time = $room_times[$old_room][0];
+				if($old_start_time > $line[6]){
+					$this->surgeries[$index][$map_keys[6]] = $start_time;
+				}
+				$old_end_time = $room_times[$old_room][1];
+				if($old_end_time < $line[7]){
+					$this->surgeries[$index][$map_keys[7]] = $end_time;
+				}
+
 				$this->surgeries[$index]["Case Procedures"] = $this->surgeries[$index]["Case Procedures"] . "~~~" . preg_replace('/[\[\d+\]]/', '', $line[3]) ;
 			}
 			
