@@ -21,6 +21,8 @@ Route::get('resident/schedule', 'SchedulesController@getSchedule');
 
 Route::get('resident', 'SchedulesController@getResident');
 
+Route::get('resident/milestones', 'SchedulesController@milestones');
+
 
 //Pages Controller
 Route::get('about', 'PagesController@getAbout');
