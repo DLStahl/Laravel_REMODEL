@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Schedule extends Model
 {
 	public $surgeries;
-	public $rooms;
 
     public function __construct($file_pointer = '')
 	{
-		$this->rooms = [];
 		$this->surgeries = [];
 		$map_keys = fgetcsv($file_pointer);
+		$room_names = [];
+		$room_count = 0;
 		while (($line = fgetcsv($file_pointer)) !== false)
 		{
 			$AM = false;
@@ -64,6 +64,51 @@ class Schedule extends Model
 				}
 			}
 
+			
+			$room_name = $line[2];
+			$new_room = true;
+			foreach($room_names as $element) {
+				if($room_name == $element){
+					$new_room = false;
+					break;
+				}
+			}
+			if($new_room){
+				$room_names[] = $room_name;
+				$room_count = $room_count + 1;
+				$this->surgeries[] = [
+					//Date
+					$map_keys[0] => $line[0],
+					//Location
+					$map_keys[1] => $line[1],
+					//Room
+					$map_keys[2] => $line[2],
+					//Case Procedures
+					$map_keys[3] => preg_replace('/[\[\d+\]]/', '', $line[3]),
+					//Lead Surgeon
+					$map_keys[4] => preg_replace('/[\[\d+\]]/', '', $line[4]),
+					//Patient Class
+					$map_keys[5] => $line[5],
+					//Proc Start
+					$map_keys[6] => $start_time,
+					//Proj End Time
+					$map_keys[7] => $end_time
+				];
+			}
+			else{
+				$old_room;
+				$index;
+				for($i = 0; $i < $room_count; $i++){
+					if($room_name == $this->surgeries[$i]["Room"]){
+						$old_room = $this->surgeries[$i];
+						$index = $i;
+						break;
+					}
+				}
+				$this->surgeries[$index]["Case Procedures"] = $this->surgeries[$index]["Case Procedures"] . "~~~" . preg_replace('/[\[\d+\]]/', '', $line[3]) ;
+			}
+			
+			/*
 			$this->surgeries[] = [
 				//Date
 				$map_keys[0] => $line[0],
@@ -82,8 +127,11 @@ class Schedule extends Model
 				//Proj End Time
 				$map_keys[7] => $end_time
 			];
+			*/
+			
 		}
 	}
+
 
 	function &__get( $index )
 	{
@@ -91,7 +139,9 @@ class Schedule extends Model
     	{
         	return $this->surgeries[ $index ];
     	}
-
     	return;
     }
+
+
+    
 }

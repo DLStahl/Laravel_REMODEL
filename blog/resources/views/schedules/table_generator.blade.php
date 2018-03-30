@@ -14,14 +14,26 @@
 			<th>Preference</th>
 			</tr>
 
-			<?php $count = 0; ?>
+			<?php $count = 0; $case_procedures = ""; ?>
 			@foreach ($data['schedule']->surgeries as $element)
 					<tr>
 						<?php $count = $count + 1; ?>
 						<td> {{ $count }} </td>
 
 						@for($j = 0; $j < count($data['element_ids']); $j++)
-							<td> {{ $element[$data['element_ids'][$j]] }} </td>
+							@if ($j == 3)
+								<?php $case_procedures = explode("~~~", $element[$data['element_ids'][$j]]); ?>
+								<td>
+									<ul>
+										@foreach ($case_procedures as $case)
+											<li> {{$case}} </li>
+										@endforeach
+									</ul>
+								
+							@else 
+								</td>
+								<td> {{ $element[$data['element_ids'][$j]] }} </td>
+							@endif
 						@endfor
 
 						<td>
