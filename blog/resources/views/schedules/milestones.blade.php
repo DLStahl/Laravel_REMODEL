@@ -36,7 +36,11 @@
 			      <option value = "F ICS3">ICS3 - Interpersonal and Communication Skills 3</option>
 			    </select>
 			    <br>
-			    
+						    
+			    <label for="Comments">Additional Comments</label>
+	      		<textarea class="form-control" rows="3" id="Comments"></textarea>
+	      		<br>
+			    <!--
 			    <div id = "FirstDescription">
 			    	<p class = "hidden PC1"> 
 				    	<strong>Description: </strong>Pre-anesthetic Patient Evaluation, Assessment, and Preparation
@@ -122,9 +126,12 @@
 				    	<strong>Description: </strong>Team and leadership skills
 				    </p>
 			    </div>	
+				-->
 			    
 			    <!-- Second Preference -->
+			    
 			    <label for="SecondPreference">Second Preference</label>
+			    
 			    <select onchange = "changeDescription(this);" class="form-control" id="SecondPreference">
 			     <option selected="selected" disabled="">Select Milestone</option>
 			      <option value = "S PC1">PC1 - Patient Care 1</option>
@@ -154,6 +161,12 @@
 			      <option value = "S ICS3">ICS3 - Interpersonal and Communication Skills 3</option>
 			    </select>
 			    <br>
+			
+			    <label for="Comments">Additional Comments</label>
+	      		<textarea class="form-control" rows="3" id="Comments"></textarea>
+	      		<br>
+
+			    <!--
 				<div id = "SecondDescription">
 			    	<p class = "hidden PC1"> 
 				    	<strong>Description: </strong>Pre-anesthetic Patient Evaluation, Assessment, and Preparation
@@ -239,9 +252,12 @@
 				    	<strong>Description: </strong>Team and leadership skills
 				    </p>
 			    </div>	
+			-->
 
 			    <!-- Third Preference -->
+			    
 			    <label for="FirstPreference">Third Preference</label>
+			    
 			    <select onchange = "changeDescription(this);" class="form-control" id="ThirdPreference">
 			      <option selected="selected" disabled="">Select Milestone</option>
 			      <option value = "T PC1">PC1 - Patient Care 1</option>
@@ -272,6 +288,7 @@
 			    </select>
 			    <br>
 
+			    <!--
 			    <div id = "ThirdDescription">
 			    	<p class = "hidden PC1"> 
 				    	<strong>Description: </strong>Pre-anesthetic Patient Evaluation, Assessment, and Preparation
@@ -357,6 +374,7 @@
 				    	<strong>Description: </strong>Team and leadership skills
 				    </p>
 			    </div>	
+			-->
 				<label for="Comments">Additional Comments</label>
 	      		<textarea class="form-control" rows="3" id="Comments"></textarea>
 	      		<br>

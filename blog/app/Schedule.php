@@ -108,27 +108,6 @@ class Schedule extends Model
 				$this->surgeries[$index]["Case Procedures"] = $this->surgeries[$index]["Case Procedures"] . "~~~" . preg_replace('/[\[\d+\]]/', '', $line[3]) ;
 			}
 			
-			/*
-			$this->surgeries[] = [
-				//Date
-				$map_keys[0] => $line[0],
-				//Location
-				$map_keys[1] => $line[1],
-				//Room
-				$map_keys[2] => $line[2],
-				//Case Procedures
-				$map_keys[3] => preg_replace('/[\[\d+\]]/', '', $line[3]),
-				//Lead Surgeon
-				$map_keys[4] => preg_replace('/[\[\d+\]]/', '', $line[4]),
-				//Patient Class
-				$map_keys[5] => $line[5],
-				//Proc Start
-				$map_keys[6] => $start_time,
-				//Proj End Time
-				$map_keys[7] => $end_time
-			];
-			*/
-			
 		}
 	}
 
