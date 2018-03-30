@@ -23,7 +23,6 @@
     	<!--doctor filter-->
     	<select id="doctors">
         <option value="none">-Doctors-</option>
-        <option value="none">-Needs parser-</option>
     	</select>
     	<!--start after filter-->
     	<select id="start_after">
@@ -70,4 +69,6 @@
 	<div class = "container">
 	    @yield('table_generator')
 	</div>
+    <script type="text/javascript" src="{{asset("js/filter.js")}}">getDoctors();
+    </script>
 @endsection('content')

@@ -4,7 +4,7 @@
 
 	@if(!is_null($data['schedule']))
 
-		<table class="table table-striped table-bordered">
+		<table class="table table-striped table-bordered" id="sched_table">
 			<tr>
 			<th>No.</th>
 			@for ($i = 0; $i < count($data['element_ids']); $i++)
