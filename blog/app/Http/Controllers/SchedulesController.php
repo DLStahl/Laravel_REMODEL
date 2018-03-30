@@ -36,4 +36,9 @@ class SchedulesController extends Controller
 		return view('schedules.table_generator')->withData($data);
 	}
 
+
+	public function milestones()
+	{
+		return view('schedules.milestones');
+	}
 }

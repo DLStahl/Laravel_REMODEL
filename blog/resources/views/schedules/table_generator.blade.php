@@ -48,6 +48,7 @@
 			@endforeach
 		</table>
 
+		<input type='submit' class='btn btn-lg btn-success'>
 	@else
 		<h2>Error Loading Schedule</h2>
 	@endif
