@@ -77,7 +77,7 @@
         //get all unique doc names
         for(var i=0; i<tab.rows.length; i++){
             if(i!=0){
-                var element=tab.rows[i].cells[5].innerHTML;
+                var element=tab.rows[i].cells[4].innerHTML;
                 if(!docs.includes(element)){
                     docs.push(element);
                 }
