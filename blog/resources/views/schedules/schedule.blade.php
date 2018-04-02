@@ -69,6 +69,27 @@
 	<div class = "container">
 	    @yield('table_generator')
 	</div>
-    <script type="text/javascript" src="{{asset("js/filter.js")}}">getDoctors();
+    <script type="text/javascript">
+        var tab, docList;
+        var docs=[];
+        tab=document.getElementById("sched_table");
+        docList=document.getElementById("doctors");
+        //get all unique doc names
+        for(var i=0; i<tab.rows.length; i++){
+            if(i!=0){
+                var element=tab.rows[i].cells[5].innerHTML;
+                if(!docs.includes(element)){
+                    docs.push(element);
+                }
+            }
+        }
+        docs.sort();
+        //create options for select
+        for(var i=0; i<docs.length; i++){
+            var option=document.createElement("option");
+            option.value=docs[i];
+            option.text=docs[i];
+            docList.appendChild(option);
+        }
     </script>
 @endsection('content')

@@ -1,4 +1,4 @@
-function filterTable(var docVal, var strtVal, var endVal){
+/*function filterTable(var docVal, var strtVal, var endVal){
 	var tab, height, width;
 	tab=document.getElementById("sched_table");
 	height=tab.rows.length;
@@ -23,7 +23,7 @@ function filterTable(var docVal, var strtVal, var endVal){
 		}
 	}
 }
-
+*/
 function getDoctors(){
 	var tab, docList;
 	var docs=[];

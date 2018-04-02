@@ -8,7 +8,9 @@
 			<tr>
 			<th>No.</th>
 			@for ($i = 0; $i < count($data['element_ids']); $i++)
-				<th> {{ $data['element_ids'][$i] }} </th>
+				@if($i!=0)
+					<th> {{ $data['element_ids'][$i] }} </th>
+				@endif
 			@endfor
 	
 			<th>Preference</th>
@@ -30,7 +32,7 @@
 										@endforeach
 									</ul>
 								
-							@else 
+							@elseif ($j!=0) 
 								</td>
 								<td> {{ $element[$data['element_ids'][$j]] }} </td>
 							@endif
