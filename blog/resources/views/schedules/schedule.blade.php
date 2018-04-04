@@ -5,11 +5,11 @@
 	<h1>Schedule Page</h1> <br>
 	<h5>Select Day to Schedule</h5>
 	<!-- Button to bring up schedule n -->
-	<button type="button" class="btn btn-primary" onclick=""><?php echo date("l"),' ', date('F'),' ',date('j'); ?></button>
+	<button type="button" class="btn btn-primary" onclick=""><?php echo date("l", strtotime('+2 day')),' ', date('F',strtotime('+2 day')),' ',date('j', strtotime('+2 day')); ?></button>
 	<!-- Button to bring up schedule n+1 -->
-	<button type="button" class="btn btn-primary" onclick=""><?php echo date("l", strtotime('+1 day')),' ', date('F',strtotime('+1 day')),' ',date('j',strtotime('+1 day')); ?></button>
+	<button type="button" class="btn btn-primary" onclick=""><?php echo date("l", strtotime('+3 day')),' ', date('F',strtotime('+3 day')),' ',date('j',strtotime('+3 day')); ?></button>
 	<!-- Button to bring up schedule n+2 -->
-	<button type="button" class="btn btn-primary" onclick=""><?php echo date("l", strtotime('+2 day')),' ', date('F',strtotime('+2 day')),' ',date('j',strtotime('+2 day')); ?></button>
+	<button type="button" class="btn btn-primary" onclick=""><?php echo date("l", strtotime('+4 day')),' ', date('F',strtotime('+4 day')),' ',date('j',strtotime('+4 day')); ?></button>
 
 
 	<br><br><br>
