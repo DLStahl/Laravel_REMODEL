@@ -4,6 +4,8 @@
 
 	@if(!is_null($data['schedule']))
 
+
+
 		<table class="table table-striped table-bordered" id="sched_table">
 			<tr>
 			<th>No.</th>
@@ -18,8 +20,8 @@
 
 			<?php $count = 0; $case_procedures = ""; ?>
 			@foreach ($data['schedule']->surgeries as $element)
-					<tr>
-						<?php $count = $count + 1; ?>
+					<?php $count = $count + 1; ?>
+					<tr id = "Row{{$count}}">
 						<td> {{ $count }} </td>
 
 						@for($j = 0; $j < count($data['element_ids']); $j++)
@@ -39,18 +41,22 @@
 						@endfor
 
 						<td>
-							<select>
-								<option value= "default">Choose here</option>
+							<select onchange = "changePreferences(this);" class = "PreferenceSelector" id = "Pref{{$count}}">
+								<option disabled selected="selected" value= "default">Choose here</option>
 								<option value= "first">First</option>
 								<option value= "second">Second</option>
-								<option value= "hird">Third</option>
+								<option value= "third">Third</option>
 							</select>
 						</td>
 					</tr>
 			@endforeach
 		</table>
 
-		<input type='submit' class='btn btn-lg btn-success' onclick="window.location='{{ url("resident/milestones") }}'">
+		<input align = "right" type='submit' class='btn btn-lg btn-success' onclick="checkSelectedPreferences();">
+		<p id = "Error Message" style="color:red; display: none;">Please select a First, Second, and Third Preference</p>
+
+
+		<!--'">-->
 	@else
 		<h2>Error Loading Schedule</h2>
 	@endif
