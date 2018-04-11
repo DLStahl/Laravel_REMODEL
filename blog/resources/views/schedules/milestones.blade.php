@@ -1,12 +1,25 @@
 @extends('main')
 
 @section('content')
+	<script type="text/javascript">
+		window.onload = function () {
+	    	var url = document.location.href, params = url.split('?')[1].split('&'),data = {}, tmp;
+	    	window.alert(params);
+		    for (var i = 0, l = params.length; i < l; i++) {
+		         tmp = params[i].split('=');
+		         data[tmp[0]] = tmp[1];
+		    }
+		    //window.alert(data);
+    	document.getElementById('here').innerHTML = data.name;
+}
+	</script>
 	<div id = "Resident Form">
 		<h4>Resident Preferences</h4>
 		<form>
 		  <div class="form-group">
 		  	<!-- First Preference -->
-			    <label for="FirstPreference">First Preference</label>
+			    <label for="FirstPreference">First Preference: 
+			    	<p id="here"></p></script></label>
 			    <select onchange = "changeDescription(this);" class="form-control" id="FirstPreference">
 			      <option selected="selected" disabled="">Select Milestone</option>
 			      <option value = "F PC1">PC1 - Patient Care 1</option>

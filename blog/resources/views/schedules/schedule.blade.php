@@ -98,6 +98,12 @@
 
     <!--Preference JS -->
     <script type="text/javascript">
+        /*
+        var firstPrefElement;
+        var secondPrefElement;
+        var thirdPrefElement;
+        */
+
         function changePreferences(dropdown){
             var optionSelectedIndex = dropdown.selectedIndex;
             var selectedPref = dropdown.options[optionSelectedIndex].innerHTML;
@@ -107,7 +113,7 @@
                 if(prefDropdowns[i].id !== dropdownId){
                     if(selectedPref === prefDropdowns[i].options[prefDropdowns[i].selectedIndex].innerHTML){
                         prefDropdowns[i].selectedIndex = 0;
-                            break;
+                        break;
                     }                
                 }                
             }
@@ -118,15 +124,30 @@
             var prefDropdowns = document.getElementsByClassName("PreferenceSelector");
             for(var i = 0; i < prefDropdowns.length; i++){
                 var selectedPref = prefDropdowns[i].options[prefDropdowns[i].selectedIndex].innerHTML;
-                if(selectedPref === "First" || selectedPref === "Second" || selectedPref === "Third"){
+                
+                if(selectedPref === "First"){
                     count = count - 1;
+                    var firstPrefElement = prefDropdowns[i];
                 }
+                else if(selectedPref === "Second"){
+                    count = count - 1;
+                    var secondPrefElement = prefDropdowns[i];
+                }
+                else if(selectedPref === "Third"){
+                    count = count - 1;
+                    var thirdPrefElement = prefDropdowns[i];
+                }             
             }
             if(count > 0){
                 document.getElementById("Error Message").style.display = "block";
             }
             else{
-                window.location='{{ url("resident/milestones") }}';
+                var firstPref = firstPrefElement.parentElement.parentElement.id.substring(3);
+                var secondPref = secondPrefElement.parentElement.parentElement.id.substring(3);
+                var thirdPref = thirdPrefElement.parentElement.parentElement.id.substring(3);
+                url = "milestones?firstPref=" + encodeURI(firstPref) + "&secondPref=" + encodeURI(secondPref) + "&thirdPref=" + encodeURI(thirdPref);
+                document.location.href = url;
+                //window.location='{{ url("resident/milestones") }}';
             }
         }
 

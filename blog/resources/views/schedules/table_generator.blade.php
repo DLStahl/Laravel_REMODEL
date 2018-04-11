@@ -4,8 +4,6 @@
 
 	@if(!is_null($data['schedule']))
 
-
-
 		<table class="table table-striped table-bordered" id="sched_table">
 			<tr>
 			<th>No.</th>
@@ -51,7 +49,6 @@
 					</tr>
 			@endforeach
 		</table>
-
 		<input align = "right" type='submit' class='btn btn-lg btn-success' onclick="checkSelectedPreferences();">
 		<p id = "Error Message" style="color:red; display: none;">Please select a First, Second, and Third Preference</p>
 

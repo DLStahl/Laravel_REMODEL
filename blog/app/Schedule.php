@@ -124,6 +124,7 @@ class Schedule extends Model
 
 			
 		}
+		//Sort $this->surgeries by room name
 		usort($this->surgeries,array($this, "cmp"));
 	}
 
