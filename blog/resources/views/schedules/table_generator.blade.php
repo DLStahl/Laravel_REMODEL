@@ -22,7 +22,7 @@
 					<tr id = "Row{{$count}}">
 						<td> {{ $count }} </td>
 
-						@for($j = 0; $j < count($data['element_ids']); $j++)
+						@for($j = 1; $j < count($data['element_ids']); $j++)
 							@if ($j == 3)
 								<?php $case_procedures = explode("~~~", $element[$data['element_ids'][$j]]); ?>
 								<td>
@@ -32,7 +32,7 @@
 										@endforeach
 									</ul>
 								
-							@elseif ($j!=0) 
+							@else
 								</td>
 								<td> {{ $element[$data['element_ids'][$j]] }} </td>
 							@endif

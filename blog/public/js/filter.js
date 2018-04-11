@@ -1,3 +1,5 @@
+@extends('schedules.schedule')
+
 /*function filterTable(var docVal, var strtVal, var endVal){
 	var tab, height, width;
 	tab=document.getElementById("sched_table");
