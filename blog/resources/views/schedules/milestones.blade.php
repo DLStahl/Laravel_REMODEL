@@ -3,7 +3,7 @@
 @section('content')
 	<script type="text/javascript">
 		window.onload = function () {
-	    	var url = document.location.href.replace(/%20/g,''), params = url.split('?')[1].split('&'),data = {}, tmp;
+	    	var url = document.location.href.replace(/%20/g,' '), params = url.split('?')[1].split('&'),data = {}, tmp;
 		    for (var i = 0, l = params.length; i < l; i++) {
 		         tmp = params[i].split('=');
 		         data[tmp[0]] = tmp[1];
@@ -12,11 +12,16 @@
     	document.getElementById('firstRoom').innerHTML = data.firstPref;
     	document.getElementById('secondRoom').innerHTML = data.secondPref;
     	document.getElementById('thirdRoom').innerHTML = data.thirdPref;
+    	document.getElementById('firstDoc').innerHTML = data.firstDoc;
+    	document.getElementById('secondDoc').innerHTML = data.secondDoc;
+    	document.getElementById('thirdDoc').innerHTML = data.thirdDoc;
+
+
 		}
 
 		function navigateHome(){
 			window.alert("Preferences Submitted!");
-			window.location = "/resident/";
+			document.location.href = "/resident/";
 		}
 	</script>
 	<div id = "Resident Form">
@@ -24,7 +29,7 @@
 		<form>
 		  <div class="form-group">
 		  	<!-- First Preference -->
-			    <label for="FirstPreference">First Preference: Room <span id = "firstRoom"></span></label>
+			    <label for="FirstPreference">First Preference: Room <span id = "firstRoom"></span> with <span id = "firstDoc"></span></label>
 			    <select onchange = "changeDescription(this);" class="form-control" id="FirstPreference">
 			      <option selected="selected" disabled="">Select Milestone</option>
 			      <option value = "F PC1">PC1 - Patient Care 1</option>
@@ -148,7 +153,7 @@
 			    
 			    <!-- Second Preference -->
 			    
-			    <label for="FirstPreference">Second Preference: Room <span id = "secondRoom"></span></label>
+			    <label for="FirstPreference">Second Preference: Room <span id = "secondRoom"></span> with <span id = "secondDoc"></span></label>
 			    
 			    <select onchange = "changeDescription(this);" class="form-control" id="SecondPreference">
 			     <option selected="selected" disabled="">Select Milestone</option>
@@ -274,7 +279,7 @@
 
 			    <!-- Third Preference -->
 			    
-			    <label for="FirstPreference">Second Preference: Room <span id = "thirdRoom"></span></label>
+			    <label for="FirstPreference">Second Preference: Room <span id = "thirdRoom"></span> with <span id = "thirdDoc"></span></label>
 			    
 			    <select onchange = "changeDescription(this);" class="form-control" id="ThirdPreference">
 			      <option selected="selected" disabled="">Select Milestone</option>

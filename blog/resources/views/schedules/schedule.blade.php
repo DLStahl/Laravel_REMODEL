@@ -190,7 +190,19 @@
                 var firstPref = firstPrefElement.parentElement.parentElement.cells[2].innerHTML;
                 var secondPref = secondPrefElement.parentElement.parentElement.cells[2].innerHTML;
                 var thirdPref = thirdPrefElement.parentElement.parentElement.cells[2].innerHTML;
-                url = "milestones?firstPref="+encodeURI(firstPref)+"&secondPref="+encodeURI(secondPref)+"&thirdPref="+encodeURI(thirdPref);
+                var firstDoc = firstPrefElement.parentElement.parentElement.cells[4].innerHTML;
+                if(firstDoc.indexOf(",") > 0){
+                     firstDoc = firstDoc.substring(0, firstDoc.indexOf(","));
+                }
+                var secondDoc = secondPrefElement.parentElement.parentElement.cells[4].innerHTML;
+                if(secondDoc.indexOf(",") > 0){
+                     secondDoc = secondDoc.substring(0, secondDoc.indexOf(","));
+                }
+                var thirdDoc = thirdPrefElement.parentElement.parentElement.cells[4].innerHTML;
+                if(thirdDoc.indexOf(",") > 0){
+                     thirdDoc = thirdDoc.substring(0, thirdDoc.indexOf(","));
+                }
+                url = "milestones?firstPref="+encodeURI(firstPref)+"&secondPref="+encodeURI(secondPref)+"&thirdPref="+encodeURI(thirdPref)+"&firstDoc="+encodeURI(firstDoc)+"&secondDoc="+encodeURI(secondDoc)+"&thirdDoc="+encodeURI(thirdDoc);
                 document.location.href = url;
             }
         }
