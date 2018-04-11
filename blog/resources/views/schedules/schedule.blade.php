@@ -136,5 +136,45 @@
             option.text=docs[i];
             docList.appendChild(option);
         }
+
+        
+
     </script>
+
+    <!--Preference JS -->
+    <script type="text/javascript">
+        function changePreferences(dropdown){
+            var optionSelectedIndex = dropdown.selectedIndex;
+            var selectedPref = dropdown.options[optionSelectedIndex].innerHTML;
+            var dropdownId = dropdown.id;
+            var prefDropdowns = document.getElementsByClassName("PreferenceSelector");
+            for(var i = 0; i < prefDropdowns.length; i++){
+                if(prefDropdowns[i].id !== dropdownId){
+                    if(selectedPref === prefDropdowns[i].options[prefDropdowns[i].selectedIndex].innerHTML){
+                        prefDropdowns[i].selectedIndex = 0;
+                            break;
+                    }                
+                }                
+            }
+        }
+
+        function checkSelectedPreferences(){
+            var count = 3;
+            var prefDropdowns = document.getElementsByClassName("PreferenceSelector");
+            for(var i = 0; i < prefDropdowns.length; i++){
+                var selectedPref = prefDropdowns[i].options[prefDropdowns[i].selectedIndex].innerHTML;
+                if(selectedPref === "First" || selectedPref === "Second" || selectedPref === "Third"){
+                    count = count - 1;
+                }
+            }
+            if(count > 0){
+                document.getElementById("Error Message").style.display = "block";
+            }
+            else{
+                window.location='{{ url("resident/milestones") }}';
+            }
+        }
+
+    </script>
+    
 @endsection('content')

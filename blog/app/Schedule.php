@@ -42,7 +42,7 @@ class Schedule extends Model
 				}
 			}
 
-
+			//Parse Proj End Time
 			$AM = false;
 			$end_time = "";
 			if(strlen($line[7]) > 0){
@@ -67,7 +67,7 @@ class Schedule extends Model
 				}
 			}
 
-			
+			//Get Room and check to see if its a new room
 			$room_name = $line[2];
 			$new_room = true;
 			foreach($room_names as $element) {
@@ -121,10 +121,16 @@ class Schedule extends Model
 
 				$this->surgeries[$index]["Case Procedures"] = $this->surgeries[$index]["Case Procedures"] . "~~~" . preg_replace('/[\[\d+\]]/', '', $line[3]) ;
 			}
+
 			
 		}
+		usort($this->surgeries,array($this, "cmp"));
 	}
 
+
+	function cmp($a, $b){
+		return strcmp($a["Room"], $b["Room"]);
+	}
 
 	function &__get( $index )
 	{
