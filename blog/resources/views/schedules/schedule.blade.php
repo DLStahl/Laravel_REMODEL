@@ -187,12 +187,11 @@
                 document.getElementById("Error Message").style.display = "block";
             }
             else{
-                var firstPref = firstPrefElement.parentElement.parentElement.id.substring(3);
-                var secondPref = secondPrefElement.parentElement.parentElement.id.substring(3);
-                var thirdPref = thirdPrefElement.parentElement.parentElement.id.substring(3);
-                url = "milestones?firstPref=" + encodeURI(firstPref) + "&secondPref=" + encodeURI(secondPref) + "&thirdPref=" + encodeURI(thirdPref);
+                var firstPref = firstPrefElement.parentElement.parentElement.cells[2].innerHTML;
+                var secondPref = secondPrefElement.parentElement.parentElement.cells[2].innerHTML;
+                var thirdPref = thirdPrefElement.parentElement.parentElement.cells[2].innerHTML;
+                url = "milestones?firstPref="+encodeURI(firstPref)+"&secondPref="+encodeURI(secondPref)+"&thirdPref="+encodeURI(thirdPref);
                 document.location.href = url;
-                //window.location='{{ url("resident/milestones") }}';
             }
         }
 
