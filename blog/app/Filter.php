@@ -134,5 +134,10 @@ class Filter
 		return ['first' => $this->$firstday, 'second' => $this->$secondday, 'third' => $this->$thirdday];
 	}
 
+	public function reportweekdays()
+	{
+		return ['first' => $this->$firstday_w, 'second' => $this->$secondday_w, 'third' => $this->$thirdday_w];
+	}
+
 } 
 
