@@ -7,8 +7,19 @@
 	<!-- Button to bring up schedule n -->
 	<button type="button" class="btn btn-primary" onclick=""><?php
 
+        if (date("l", strtotime('today'))=='Friday') {
+            echo date("l", strtotime('+3 day')),' ', date('F',strtotime('+3 day')),' ',date('j',strtotime('+3 day'));
+        }
+        else{
+            echo date("l", strtotime('+1 day')),' ', date('F',strtotime('+1 day')),' ',date('j',strtotime('+1 day')); 
+        }
+    
+    ?></button>
+	<!-- Button to bring up schedule n+1 -->
+	<button type="button" class="btn btn-primary" onclick=""><?php
+
         if(date("l", strtotime('today'))=='Thursday'){
-            echo date("l", strtotime('+4 day')),' ', date('F',strtotime('+4 day')),' ',date('j',strtotime('+4 day'));
+            echo date("l", strtotime('+4 day')),' ', date('F',strtotime('+5 day')),' ',date('j',strtotime('+5 day'));
         }
         elseif (date("l", strtotime('today'))=='Friday') {
             echo date("l", strtotime('+4 day')),' ', date('F',strtotime('+4 day')),' ',date('j',strtotime('+4 day'));
@@ -18,7 +29,7 @@
         }
     
     ?></button>
-	<!-- Button to bring up schedule n+1 -->
+	<!-- Button to bring up schedule n+2 -->
 	<button type="button" class="btn btn-primary" onclick=""><?php
 
         if(date("l", strtotime('today'))=='Wednesday'){
@@ -32,26 +43,6 @@
         }
         else{
             echo date("l", strtotime('+3 day')),' ', date('F',strtotime('+3 day')),' ',date('j',strtotime('+3 day')); 
-        }
-    
-    ?></button>
-	<!-- Button to bring up schedule n+2 -->
-	<button type="button" class="btn btn-primary" onclick=""><?php
-
-        if(date("l", strtotime('today'))=='Tuesday'){
-            echo date("l", strtotime('+6 day')),' ', date('F',strtotime('+6 day')),' ',date('j',strtotime('+6 day'));
-        }
-        elseif(date("l", strtotime('today'))=='Wednesday'){
-            echo date("l", strtotime('+6 day')),' ', date('F',strtotime('+6 day')),' ',date('j',strtotime('+6 day'));
-        }
-        elseif(date("l", strtotime('today'))=='Thursday'){
-            echo date("l", strtotime('+6 day')),' ', date('F',strtotime('+6 day')),' ',date('j',strtotime('+6 day'));
-        }
-        elseif (date("l", strtotime('today'))=='Friday') {
-            echo date("l", strtotime('+6 day')),' ', date('F',strtotime('+6 day')),' ',date('j',strtotime('+6 day'));
-        }
-        else{
-            echo date("l", strtotime('+4 day')),' ', date('F',strtotime('+4 day')),' ',date('j',strtotime('+4 day')); 
         }
     
     ?></button>
