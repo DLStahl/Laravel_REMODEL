@@ -7,10 +7,18 @@ define("DEFAULTSET", "200");
 
 class Filter
 {
+	// Store numeric dates
 	private $date;
 	private $firstday;
 	private $secondday;
 	private $thirdday;
+
+	// Store weekdays
+	private $fristday_w;
+	private $secondday_w;
+	private $thirdday_w;
+
+	// Store other properties
     private $category;
     private $doctor;
 	private $time_start;
@@ -23,28 +31,43 @@ class Filter
 		// date("l", strtotime('+4 day'))
 		if (date("l", strtotime('today')) == 'Wednesday') {
 			$firstday = date("Y", strtotime('+1 day')).date("m", strtotime('+1 day')).date("d", strtotime('+1 day'));
+			$firstday_w = date("l", strtotime('+1 day'));
 			$secondday = date("Y", strtotime('+2 day')).date("m", strtotime('+2 day')).date("d", strtotime('+2 day'));
+			$secondday_w = date("l", strtotime('+2 day'));
 			$thirdday = date("Y", strtotime('+5 day')).date("m", strtotime('+5 day')).date("d", strtotime('+5 day'));
+			$thirdday_w = date("l", strtotime('+5 day'));
 		}
 		elseif(date("l", strtotime('today')) == 'Thursday') {
 			$firstday = date("Y", strtotime('+1 day')).date("m", strtotime('+1 day')).date("d", strtotime('+1 day'));
-			$thirdday = date("Y", strtotime('+4 day')).date("m", strtotime('+4 day')).date("d", strtotime('+4 day'));
+			$firstday_w = date("l", strtotime('+1 day'));
+			$secondday = date("Y", strtotime('+4 day')).date("m", strtotime('+4 day')).date("d", strtotime('+4 day'));
+			$secondday_w = date("l", strtotime('+4 day'));
 			$thirdday = date("Y", strtotime('+5 day')).date("m", strtotime('+5 day')).date("d", strtotime('+5 day'));
+			$thirdday_w = date("l", strtotime('+5 day'));
 		}
 		elseif(date("l", strtotime('today')) == 'Friday') {
 			$firstday = date("Y", strtotime('+3 day')).date("m", strtotime('+3 day')).date("d", strtotime('+3 day'));
-			$thirdday = date("Y", strtotime('+4 day')).date("m", strtotime('+4 day')).date("d", strtotime('+4 day'));
+			$firstday_w = date("l", strtotime('+3 day'));
+			$secondday = date("Y", strtotime('+4 day')).date("m", strtotime('+4 day')).date("d", strtotime('+4 day'));
+			$secondday_w = date("l", strtotime('+4 day'));
 			$thirdday = date("Y", strtotime('+5 day')).date("m", strtotime('+5 day')).date("d", strtotime('+5 day'));
+			$thirdday_w = date("l", strtotime('+5 day'));
 		}
 		elseif(date("l", strtotime('today')) == 'Saturday') {
 			$firstday = date("Y", strtotime('+2 day')).date("m", strtotime('+2 day')).date("d", strtotime('+2 day'));
-			$thirdday = date("Y", strtotime('+3 day')).date("m", strtotime('+3 day')).date("d", strtotime('+3 day'));
+			$firstday_w = date("l", strtotime('+2 day'));
+			$secondday = date("Y", strtotime('+3 day')).date("m", strtotime('+3 day')).date("d", strtotime('+3 day'));
+			$secondday_w = date("l", strtotime('+3 day'));
 			$thirdday = date("Y", strtotime('+4 day')).date("m", strtotime('+4 day')).date("d", strtotime('+4 day'));
+			$thirdday_w = date("l", strtotime('+4 day'));
 		}
 		else {
 			$firstday = date("Y", strtotime('+1 day')).date("m", strtotime('+1 day')).date("d", strtotime('+1 day'));
-			$thirdday = date("Y", strtotime('+2 day')).date("m", strtotime('+2 day')).date("d", strtotime('+2 day'));
+			$firstday_w = date("l", strtotime('+1 day'));
+			$seconddday = date("Y", strtotime('+2 day')).date("m", strtotime('+2 day')).date("d", strtotime('+2 day'));
+			$secondday_w = date("l", strtotime('+2 day'));
 			$thirdday = date("Y", strtotime('+3 day')).date("m", strtotime('+3 day')).date("d", strtotime('+3 day'));
+			$thirdday_w = date("l", strtotime('+3 day'));
 		}
 	}
 
