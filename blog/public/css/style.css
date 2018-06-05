@@ -37,10 +37,7 @@ th{
     border-color: #666666;
 }
 
-
-
-
-
+    
 
 #footer-wrap{
     min-height: 50px;
@@ -52,14 +49,14 @@ th{
 
 #footer{
     margin: auto;
-    max-width: 1000px;
+    max-width: 100%;
     min-height:inherit;
     padding: 10px;
 }
 
 #footer_left{
-	float: left;
-    padding-left: 15px;
+    float: left;
+    text-align: left;
 }
 
 #footer_right{

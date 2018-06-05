@@ -9,18 +9,20 @@
 
     <body>
 
-        @include('partials._nav')
-
+      
         <!-- Default Bootstrap Navbar -->
-
+        @include('partials._nav')
         <div class="container">
+           
+
      
             
             @yield('content') <!-- yield is for dynamic (changes based on the page we're on) -->
 
-            @include('partials._footer')
+           
 
         </div>
+        @include('partials._footer')
 
         @include('partials._javascripts')
 
