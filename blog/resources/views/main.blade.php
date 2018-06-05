@@ -14,6 +14,7 @@
         <!-- Default Bootstrap Navbar -->
 
         <div class="container">
+     
             
             @yield('content') <!-- yield is for dynamic (changes based on the page we're on) -->
 

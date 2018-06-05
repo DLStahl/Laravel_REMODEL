@@ -49,7 +49,7 @@
 					</tr>
 			@endforeach
 		</table>
-		<input align = "right" type='submit' class='btn btn-lg btn-success' onclick="checkSelectedPreferences();">
+		<input align = "right" type='submit' class='btn btn-md btn-success' onclick="checkSelectedPreferences();">
 		<p id = "Error Message" style="color:red; display: none;">Please select a First, Second, and Third Preference</p>
 
 

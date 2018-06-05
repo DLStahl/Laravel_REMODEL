@@ -16,11 +16,11 @@ class PagesController extends Controller
 
 	public function getAbout()
 	{
-		$first = "Patrick";
-		$last = "Muller";
+		$first = "Yi";
+		$last = "XU";
 
 		$full = $first . " " . $last;
-		$email = "muller.98@osu.edu";
+		$email = "xu.1882@osu.edu";
 
 		$data['fullname'] = $full;
 		$data['email'] = $email;
