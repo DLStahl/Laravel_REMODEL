@@ -1,4 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar">
+<div class="container">
+  <a class="navbar-brand" href="https://wexnermedical.osu.edu">
+    <img src="https://wexnermedical.osu.edu/-/media/images/wexnermedical/global/modules/global/header/osuwexmedctr.png?la=en&hash=E40538F4EC98B54A105B79EC8FA1BAB09709DDDC" height="40" alt="">
+  </a>
+</div>
+</nav>
+<nav class="navbar navbar-expand-lg" style="background-color: #bb0000;">
+<div class="container">
     <a class="navbar-brand" href="#">REMODEL</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,4 +32,7 @@
             </li>
         </ul>
     </div>
+    </div>
 </nav>
+
+<br>

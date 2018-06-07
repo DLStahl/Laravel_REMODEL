@@ -2,11 +2,13 @@
 
 <div id="footer-wrap">
     <div id="footer">
-	    <div id="footer_left">
-            <p>OSU Anesthesiology</p>
-        </div>
-        <div id="footer_right">
+        <div class="container">
+   
+        <div id="footer_left">
             <p>&copy; <?php echo date('Y');?> OSU Anesthesiology</p>
+      
+            </div>
         </div>
     </div>
 </div>
+

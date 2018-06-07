@@ -126,6 +126,14 @@ class Schedule extends Model
 		}
 		//Sort $this->surgeries by room name
 		usort($this->surgeries,array($this, "cmp"));
+
+		$arrlength=count($room_names);
+		for($x=0;$x<$arrlength;$x++)
+  			{
+			error_log($room_names[$x]);	
+			}
+
+
 	}
 
 

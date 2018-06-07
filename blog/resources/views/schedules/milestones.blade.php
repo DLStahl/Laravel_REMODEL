@@ -404,7 +404,8 @@
 	      		<!--
 	      		<input align = "right" type='submit' class='btn btn-lg btn-success' onclick="checkSelectedPreferences();">
 				-->
-	      		<button type="submit" class="btn btn-default" onclick="navigateHome();">Submit</button>
+				  <input align = "right" type='submit' class='btn btn-md btn-success' onclick="navigateHome();">
+
 			  </div>
 			</form>
 		</div>

@@ -11,3 +11,15 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
+
+http://127.0.0.1:8000/resident/milestones?
+firstPref=%20%20&
+secondPref=%20CCCT%2001%20&
+thirdPref=%20CCCT%2002%20&
+
+
+firstDoc=%20H%20Francis%20Farhadi&
+secondDoc=%20Geoffrey%20N%20Box&
+thirdDoc=%20Valerie%20P%20Grignol
+
+educational objective 

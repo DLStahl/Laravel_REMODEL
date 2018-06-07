@@ -15,6 +15,10 @@
 //Schedules Controller
 Route::get('/', 'SchedulesController@getIndex');
 
+Route::get('resident/contact', 'PagesController@getContact');
+
+Route::get('resident/about', 'PagesController@getAbout');
+
 Route::get('resident/instructions', 'SchedulesController@getInstructions');
 
 Route::get('resident/schedule', 'SchedulesController@getSchedule');
@@ -35,3 +39,4 @@ Route::get('pages/index', 'PagesController@getIndex');
 
 //Posts Controller
 Route::resource('posts', 'PostController');
+
