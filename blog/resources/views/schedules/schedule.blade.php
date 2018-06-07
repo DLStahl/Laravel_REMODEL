@@ -5,6 +5,9 @@
 	<h1>Schedule Page</h1> <br>
 	<h5>Select Day to Schedule</h5>
 	<!-- Button to bring up schedule n -->
+    <h5><?php
+        echo "Date: ".date("l", strtotime('today')),' ', date('F',strtotime('today')),' ',date('j',strtotime('today'));
+    ?></h5>
     <button type="button" class="btn btn-primary" onclick=""><?php
 
         if (date("l", strtotime('today'))=='Friday') {
@@ -19,10 +22,10 @@
 	<button type="button" class="btn btn-primary" onclick=""><?php
 
         if(date("l", strtotime('today'))=='Thursday'){
-            echo date("l", strtotime('+4 day')),' ', date('F',strtotime('+5 day')),' ',date('j',strtotime('+5 day'));
+            echo date("l", strtotime('+4 day')),' ', date('F',strtotime('+4 day')),' ',date('j',strtotime('+4 day'));
         }
         elseif (date("l", strtotime('today'))=='Friday') {
-            echo date("l", strtotime('+4 day')),' ', date('F',strtotime('+4 day')),' ',date('j',strtotime('+4 day'));
+            echo date("l", strtotime('+5 day')),' ', date('F',strtotime('+5 day')),' ',date('j',strtotime('+5 day'));
         }
         else{
             echo date("l", strtotime('+2 day')),' ', date('F',strtotime('+2 day')),' ',date('j',strtotime('+2 day')); 
